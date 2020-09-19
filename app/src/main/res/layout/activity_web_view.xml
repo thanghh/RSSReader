@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimaryDark"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/mLayoutClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_16">
+
+                    <ImageView
+                        android:id="@+id/ibClose"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:tint="@color/colorWhite"
+                        android:src="@drawable/ic_back" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/mTextTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:paddingStart="@dimen/padding_16"
+                    android:singleLine="true"
+                    android:text="@string/name_article"
+                    android:textColor="@color/colorTitleToolbar"
+                    android:textSize="@dimen/text_size_18"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/mImageSettings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin_3"
+                    android:padding="@dimen/padding_15"
+                    android:src="@drawable/ic_setting_white" />
+
+            </LinearLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <WebView
+            android:id="@+id/mWebView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:isScrollContainer="false"
+            android:scrollbars="none"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

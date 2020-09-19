@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+<!--    <style name="darktheme" parent="Theme.AppCompat.Light.NoActionBar">-->
+<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+<!--        <item name="colorPrimary">#212121</item>-->
+<!--        <item name="colorPrimaryDark">#000000</item>-->
+<!--        <item name="colorAccent">@color/colorAccent</item>-->
+<!--        <item name="backgroundColor">#000000</item>-->
+<!--        <item name="cardBackgroundColor">#424242</item>-->
+<!--        <item name="android:textColor">#ffffff</item>-->
+<!--        <item name="editTextColor">#ffffff</item>-->
+<!--        <item name="android:textColorSecondary">@android:color/white</item>-->
+<!--        <item name="boxBackgroundColor">#303030</item>-->
+<!--        &lt;!&ndash; <item name="backgroundColor">#303030</item> &ndash;&gt;-->
+
+<!--        <item name="android:windowContentTransitions" tools:ignore="NewApi">true</item>-->
+<!--    </style>-->
+</resources>

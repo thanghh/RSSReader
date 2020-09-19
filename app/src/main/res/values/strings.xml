@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">RSSReader</string>
+
+    <!-- Dialog Warning Connection -->
+    <string name="dialog_warning_connection_title">Cảnh báo</string>
+    <string name="dialog_warning_connection_message">Bạn hãy kiểm tra lại internet nhé.</string>
+    <string name="dialog_warning_connection_positive">Đồng ý</string>
+    <string name="dark_mode">Chế độ ban đêm</string>
+    <string name="light_mode">Chế độ ban ngày</string>
+    <string name="name_article">VnExpress</string>
+</resources>
