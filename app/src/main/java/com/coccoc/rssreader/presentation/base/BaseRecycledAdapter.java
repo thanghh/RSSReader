@@ -14,44 +14,12 @@ import java.util.List;
 
 public abstract class BaseRecycledAdapter<T, H> extends RecyclerView.Adapter<BaseRecycledHolder> {
 
-    public List<T> getItems() {
-        return items;
-    }
-
-    public void setItems(List<T> items) {
-        this.items = items;
-    }
-
-    public OnItemClickListener getOnItemClickListener() {
-        return onItemClickListener;
-    }
-
-    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
-        this.onItemClickListener = onItemClickListener;
-    }
-
-    public interface OnLoadMoreListener {
-        void onLoadMore();
-    }
-
-    private OnLoadMoreListener onLoadMoreListener;
-
-    public void setOnLoadMoreListener(OnLoadMoreListener mOnLoadMoreListener) {
-        this.onLoadMoreListener = mOnLoadMoreListener;
-    }
-
     protected List<T> items;
-
-    private OnItemClickListener onItemClickListener;
 
     protected H h;
 
     public BaseRecycledAdapter() {
         items = new ArrayList<>();
-    }
-
-    protected View inflate(@LayoutRes int id, ViewGroup parent) {
-        return LayoutInflater.from(parent.getContext()).inflate(id, parent, false);
     }
 
     @Override
@@ -61,11 +29,6 @@ public abstract class BaseRecycledAdapter<T, H> extends RecyclerView.Adapter<Bas
         if (items.size() > 0) {
             final T t = items.get(position);
             onBindHolder((H) holder, t, position);
-            if (onItemClickListener != null && items.get(position) != null) {
-                holder.itemView.setOnClickListener(v -> {
-                    onItemClickListener.onItemClick(position);
-                });
-            }
         }
     }
 
@@ -87,13 +50,6 @@ public abstract class BaseRecycledAdapter<T, H> extends RecyclerView.Adapter<Bas
         return null;
     }
 
-    public void addAllAndNotify(List<T> moreItems) {
-        int startItem = items.size() - 1;
-        items.addAll(moreItems);
-        int endItem = items.size() - 1;
-        notifyItemRangeChanged(startItem, endItem);
-    }
-
     public void addAll(List<T> list) {
         if (items != null) {
             items.clear();
@@ -108,7 +64,4 @@ public abstract class BaseRecycledAdapter<T, H> extends RecyclerView.Adapter<Bas
         notifyItemRangeChanged(startItem, items.size());
     }
 
-    public interface OnItemClickListener {
-        void onItemClick(int position);
-    }
 }
